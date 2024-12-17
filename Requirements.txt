@@ -1,3 +1,8 @@
-flask
-whisper
-ffmpeg-python
+Flask==3.0.3
+openai-whisper==20240930
+torch==2.5.1
+torchaudio==2.5.1
+numpy==2.0.2
+soundfile==0.12.1
+Werkzeug==3.0.4
+gunicorn==21.2.0
