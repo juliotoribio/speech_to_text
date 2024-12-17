@@ -1,0 +1,280 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Varela&display=swap');
+
+/* Estilos generales para html y body */
+html, body {
+    font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Texto blanco para contraste */
+    background-color: hsla(227, 0%, 0%, 1);
+    background-image:
+        radial-gradient(at 40% 20%, hsla(25, 0%, 0%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189, 26%, 15%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355, 16%, 33%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, hsla(340, 100%, 9%, 1) 0px, transparent 50%),
+        radial-gradient(at 60% 66%, hsla(59, 91%, 62%, 0.2) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(16, 3%, 20%, 1) 0px, transparent 50%);
+    position: relative;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-y: auto; /* Permite scroll vertical */
+    min-height: 100%; /* Asegura que el body siempre llene la pantalla */
+}
+
+/* Pseudo-elemento de ruido */
+body::before {
+    font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: repeating-radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    opacity: 0.2; /* Ajusta la intensidad del ruido */
+    z-index: -1; /* Envía el pseudo-elemento al fondo */
+}
+
+/* Encabezado */
+header h1 {
+    font-family: 'Lexend', 'Poppins', Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 300;
+font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;
+}
+
+/* Sección principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Sección general */
+section {
+    background-color: #1a1a1a74; /* Gris oscuro */
+    color: #ffffff;
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+/* Botones */
+button {
+    font-family: 'Varela', 'Lexend', 'Poppins', Arial, sans-serif;
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #23211636;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    font-family: 'Varela', 'Lexend', 'Poppins', Arial, sans-serif;
+}
+
+button:disabled {
+    font-family: 'Varela', 'Lexend', 'Poppins', Arial, sans-serif;
+    border: 1px solid #ffffff57;
+    color: #ffffff57;
+
+    cursor: not-allowed;
+}
+
+/* Input de archivo */
+input[type="file"] {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+    overflow-clip-margin: 0px !important;
+    overflow: clip !important;
+}
+
+
+/* Barra de progreso */
+#progressBar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+/* Resultado */
+#transcription {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #1a1a1a4a;
+    color: #ffffff;
+}
+
+/* Estados */
+.status {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.status.recording {    font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;
+    font-weight: 300;    border-radius: 15px;
+    color:#0E0E0E;
+    background-color: #D6D5CF; }
+.status.processing {     font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;    font-weight: 300;    border-radius: 15px;
+    color:#0E0E0E;
+    background-color: #E1DAF7; }
+.status.uploading {     font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;    font-weight: 300;    border-radius: 15px;
+    color:#0E0E0E;
+    background-color: #E1DAF7; }
+.status.completed {     font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;    font-weight: 300;    border-radius: 15px;
+    color:#0E0E0E;
+    background-color: #F5FFC8; }
+.status.error {     font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;    font-weight: 300;
+
+    background-color: #f44336; }
+
+
+/* Contenedor del menú */
+#menu {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 60px; /* Altura del menú */
+    margin: 20px 0px 20px 0px; /* Espacio debajo del menú */
+
+    padding: 10px;
+}
+
+/* Logo dentro del menú */
+img#logo {
+    width: 40px;
+    height: auto;
+    cursor: pointer; /* Hace clickeable el logo */
+}
+
+input#audioFile{
+    font-family: 'Lexend', 'Varela', 'Poppins', Arial, sans-serif;
+    font-weight: 300;    border-radius: 15px;
+    border: 1px solid #fff;
+    margin: 10px 5px;
+    padding: 10px 20px;
+
+
+}
+
+
+/* Estilo del botón */
+.record-button {
+    font-family: 'Varela', 'Lexend', 'Poppins', Arial, sans-serif;
+    display: inline-flex; /* Alinea ícono y texto horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #ffffff; /* Color del texto */
+    background-color: rgba(35, 33, 22, 0.21); /* Fondo transparente */
+    border: 1px solid #fff; /* Borde blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+/* Hover: Efecto al pasar el cursor */
+.record-button:hover {
+    background-color: rgba(245, 87, 19, 0.492); /* Cambio de color al pasar el mouse */
+    color: #fff; /* Mantén el texto blanco */
+}
+
+/* Estado deshabilitado */
+.record-button:disabled {
+    background-color: #666666; /* Fondo gris */
+    color: #bbbbbb; /* Texto gris claro */
+    border: 1px solid #999999; /* Borde blanco */
+
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilo del ícono Material Symbols */
+.material-symbols-outlined {
+    font-size: 20px; /* Tamaño del ícono */
+    line-height: 1; /* Alineación vertical precisa */
+}
+
+
+form#uploadForm {
+    display: inline-flex
+;
+}
+
+
+/* Encabezado de transcripción */
+.transcription-header {
+    display: flex;
+    justify-content: space-between; /* Título a la izquierda, botón a la derecha */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Botón de copiar */
+.copy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: rgba(245, 87, 19, 0.492); /* Cambio de color al pasar el mouse */
+}
+
+/* Icono del botón */
+.material-symbols-outlined {
+    font-size: 20px; /* Tamaño del ícono */
+    line-height: 1;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px 0; /* Espaciado interno */
+    color: #454444; /* Texto blanco */
+    font-family: 'Varela', 'Lexend', 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0; /* Eliminar margen por defecto */
+}

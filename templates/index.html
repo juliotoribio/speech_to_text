@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio 2 Text</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Varela&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- JS -->
+    <script src="/static/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <img src="/static/logo.svg" alt="Logo" id="logo">
+        </div>
+        <h1>Audio to Text Generator</h1>
+    </header>
+
+    <main>
+        <!-- Grabación de Audio -->
+        <section id="record-section">
+            <h2>Grabar Audio</h2>
+           <!-- Botón con ícono y texto -->
+            <button id="start" class="record-button" aria-label="Iniciar grabación">
+                <span class="material-symbols-outlined">graphic_eq</span>
+                Iniciar Grabación
+            </button>
+
+
+            
+        <!-- Botón para Detener Grabación -->
+        <button id="stop" class="record-button" aria-label="Detener grabación" disabled>
+            <span class="material-symbols-outlined">stop_circle</span>
+            Detener Grabación
+        </button>
+            <p id="status" aria-live="polite"></p>
+        </section>
+
+        <!-- Subir Archivo -->
+        <section id="upload-section">
+            <h2>Subir Audio</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="audioFile" name="file" accept=".mp3,.wav,.m4a,.flac" required />
+<!-- Botón con ícono y texto -->
+<button type="submit" id="upload" class="record-button" aria-label="Subir y Transcribir">
+    <span class="material-symbols-outlined">drive_folder_upload</span>
+    Subir y Transcribir
+</button>
+
+
+            </form>
+            <p id="fileStatus" aria-live="polite"></p>
+        </section>
+
+     <!-- Resultado -->
+<section id="result-section">
+    <div class="transcription-header">
+        <h2>Transcripción</h2>
+        <!-- Botón para copiar el texto -->
+        <button id="copyButton" class="copy-button" aria-label="Copiar texto">
+            <span class="material-symbols-outlined">content_copy</span>
+        </button>
+    </div>
+    <p id="transcription" aria-live="polite"></p>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+    <p>Desarrollado por: <strong>Julio in Digital</strong> 2024 - Derechos Reservados</p>
+</footer>
+
+
+    </main>
+</body>
+</html>
